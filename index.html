@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Vinod | Freelance Web Developer</title>
+<title>Vinod | Web Developer</title>
 
 <style>
 
@@ -12,12 +12,12 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial;
+font-family:'Poppins',sans-serif;
 scroll-behavior:smooth;
 }
 
 body{
-background:#f4f7fb;
+background:#f5f7fb;
 }
 
 /* NAVBAR */
@@ -31,16 +31,24 @@ align-items:center;
 padding:15px 80px;
 position:sticky;
 top:0;
+z-index:1000;
 }
 
 nav h2{
 color:#00c3ff;
+font-size:28px;
 }
 
 nav a{
 color:white;
 margin-left:25px;
 text-decoration:none;
+font-size:16px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#00c3ff;
 }
 
 /* HERO */
@@ -65,14 +73,28 @@ background-position:center;
 font-size:55px;
 }
 
+.hero span{
+color:#00c3ff;
+}
+
+.hero p{
+margin:20px 0;
+font-size:20px;
+}
+
 .btn{
-background:#00c3ff;
-padding:12px 25px;
+background:linear-gradient(45deg,#00c3ff,#007bff);
+padding:13px 30px;
 border:none;
-border-radius:5px;
 color:white;
-margin-top:20px;
+border-radius:6px;
+font-size:16px;
 cursor:pointer;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
 }
 
 /* SECTION */
@@ -83,42 +105,52 @@ padding:80px 10%;
 
 .section-title{
 text-align:center;
-font-size:35px;
-margin-bottom:40px;
+font-size:38px;
+margin-bottom:50px;
+color:#0a2540;
 }
 
 /* ABOUT */
 
 .about{
 display:flex;
-gap:40px;
+gap:50px;
+align-items:center;
 flex-wrap:wrap;
 justify-content:center;
-align-items:center;
 }
 
 .about img{
-width:250px;
+width:260px;
 border-radius:50%;
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+.about-text{
+max-width:600px;
+font-size:17px;
+line-height:1.7;
 }
 
 /* SKILLS */
 
 .skill{
-margin:20px 0;
+margin:25px 0;
+font-weight:bold;
 }
 
 .bar{
 background:#ddd;
-height:10px;
-border-radius:10px;
+height:12px;
+border-radius:20px;
+margin-top:6px;
 }
 
 .bar span{
 display:block;
-height:10px;
+height:12px;
 background:#00c3ff;
-border-radius:10px;
+border-radius:20px;
 }
 
 /* PROJECTS */
@@ -126,20 +158,20 @@ border-radius:10px;
 .projects{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+gap:30px;
 }
 
 .card{
 background:white;
 border-radius:10px;
 overflow:hidden;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
+box-shadow:0 10px 20px rgba(0,0,0,0.1);
 transition:0.3s;
 }
 
 .card img{
 width:100%;
-height:170px;
+height:180px;
 object-fit:cover;
 }
 
@@ -156,43 +188,20 @@ transform:translateY(-10px);
 .services{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
+gap:30px;
 }
 
 .service-box{
-background:yellow;
-padding:25px;
+background:white;
+padding:30px;
 border-radius:10px;
 text-align:center;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
+box-shadow:0 10px 20px rgba(0,0,0,0.1);
+transition:0.3s;
 }
 
-/* REVIEWS */
-
-.reviews{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:25px;
-}
-
-.review-box{
-background:blue;
-padding:25px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-}
-
-/* SOCIAL */
-
-.social{
-text-align:center;
-}
-
-.social a{
-margin:10px;
-font-size:20px;
-text-decoration:none;
-color:#0a2540;
+.service-box:hover{
+transform:translateY(-10px);
 }
 
 /* CONTACT */
@@ -206,18 +215,18 @@ gap:15px;
 }
 
 input,textarea{
-padding:10px;
+padding:12px;
 border:1px solid #ccc;
-border-radius:5px;
+border-radius:6px;
 }
 
 /* FOOTER */
 
 footer{
 background:#0a2540;
-color:sky blue;
+color:white;
 text-align:center;
-padding:20px;
+padding:25px;
 margin-top:40px;
 }
 
@@ -226,8 +235,9 @@ margin-top:40px;
 
 <body>
 
-<nav>
+<!-- NAVBAR -->
 
+<nav>
 <h2>Vinod</h2>
 
 <div>
@@ -235,7 +245,6 @@ margin-top:40px;
 <a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
 <a href="#services">Services</a>
-<a href="#reviews">Reviews</a>
 <a href="#contact">Contact</a>
 </div>
 
@@ -247,11 +256,11 @@ margin-top:40px;
 
 <div>
 
-<h1>Hi, I'm Vinod</h1>
+<h1>Hi, I'm <span>Vinod</span></h1>
 
 <p>Freelance Web Developer</p>
 
-<button class="btn">Hire Me</button>
+<button class="btn" onclick="hire()">Hire Me</button>
 
 </div>
 
@@ -267,10 +276,15 @@ margin-top:40px;
 
 <img src="https://randomuser.me/api/portraits/men/32.jpg">
 
-<p style="max-width:500px;">
-I am an Information Technology student and freelance web developer.
-I create responsive modern websites using HTML, CSS and JavaScript.
+<div class="about-text">
+
+<p>
+I am an Information Technology student and passionate web developer.
+I build modern responsive websites using HTML, CSS and JavaScript.
+My goal is to create attractive websites for businesses and freelance clients.
 </p>
+
+</div>
 
 </div>
 
@@ -308,27 +322,36 @@ JavaScript
 <div class="projects">
 
 <div class="card">
+
 <img src="https://images.unsplash.com/photo-1497366216548-37526070297c">
+
 <div class="card-content">
 <h3>College Website</h3>
 <p>Responsive college website design.</p>
 </div>
+
 </div>
 
 <div class="card">
+
 <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f">
+
 <div class="card-content">
 <h3>Business Website</h3>
-<p>Website for local businesses.</p>
+<p>Website for local business clients.</p>
 </div>
+
 </div>
 
 <div class="card">
+
 <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
+
 <div class="card-content">
 <h3>Portfolio Website</h3>
-<p>Developer portfolio website.</p>
+<p>Personal developer portfolio.</p>
 </div>
+
 </div>
 
 </div>
@@ -339,50 +362,23 @@ JavaScript
 
 <section id="services">
 
-<h2 class="section-title">Services</h2>
+<h2 class="section-title">Freelance Services</h2>
 
 <div class="services">
 
 <div class="service-box">
 <h3>Website Development</h3>
-<p>Responsive business websites.</p>
+<p>Modern responsive websites for businesses.</p>
 </div>
 
 <div class="service-box">
-<h3>Landing Pages</h3>
-<p>High converting marketing pages.</p>
+<h3>Landing Page</h3>
+<p>High converting landing pages for marketing.</p>
 </div>
 
 <div class="service-box">
-<h3>UI Design</h3>
-<p>Modern website UI design.</p>
-</div>
-
-</div>
-
-</section>
-
-<!-- REVIEWS -->
-
-<section id="reviews">
-
-<h2 class="section-title">Client Reviews</h2>
-
-<div class="reviews">
-
-<div class="review-box">
-⭐️⭐️⭐️⭐️⭐️  
-<p>Great website developer. Highly recommended.</p>
-</div>
-
-<div class="review-box">
-⭐️⭐️⭐️⭐️⭐️  
-<p>Very professional and fast delivery.</p>
-</div>
-
-<div class="review-box">
-⭐️⭐️⭐️⭐️⭐️  
-<p>My business website looks amazing!</p>
+<h3>Website Design</h3>
+<p>Creative UI/UX design for websites.</p>
 </div>
 
 </div>
@@ -414,6 +410,14 @@ JavaScript
 <p>© 2026 Vinod | Freelance Web Developer</p>
 
 </footer>
+
+<script>
+
+function hire(){
+alert("Thanks for visiting my portfolio!");
+}
+
+</script>
 
 </body>
 </html>
