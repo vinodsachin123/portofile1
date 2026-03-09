@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Vinod | Freelance Web Developer</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f4f7fb;
+}
+
+/* NAVBAR */
+
+nav{
+background:#0a2540;
+color:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 80px;
+position:sticky;
+top:0;
+}
+
+nav h2{
+color:#00c3ff;
+}
+
+nav a{
+color:white;
+margin-left:25px;
+text-decoration:none;
+}
+
+/* HERO */
+
+.hero{
+height:90vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+
+background:
+linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url("https://images.unsplash.com/photo-1498050108023-c5249f4df085");
+
+background-size:cover;
+background-position:center;
+}
+
+.hero h1{
+font-size:55px;
+}
+
+.btn{
+background:#00c3ff;
+padding:12px 25px;
+border:none;
+border-radius:5px;
+color:white;
+margin-top:20px;
+cursor:pointer;
+}
+
+/* SECTION */
+
+section{
+padding:80px 10%;
+}
+
+.section-title{
+text-align:center;
+font-size:35px;
+margin-bottom:40px;
+}
+
+/* ABOUT */
+
+.about{
+display:flex;
+gap:40px;
+flex-wrap:wrap;
+justify-content:center;
+align-items:center;
+}
+
+.about img{
+width:250px;
+border-radius:50%;
+}
+
+/* SKILLS */
+
+.skill{
+margin:20px 0;
+}
+
+.bar{
+background:#ddd;
+height:10px;
+border-radius:10px;
+}
+
+.bar span{
+display:block;
+height:10px;
+background:#00c3ff;
+border-radius:10px;
+}
+
+/* PROJECTS */
+
+.projects{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card img{
+width:100%;
+height:170px;
+object-fit:cover;
+}
+
+.card-content{
+padding:20px;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+/* SERVICES */
+
+.services{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.service-box{
+background:yellow;
+padding:25px;
+border-radius:10px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* REVIEWS */
+
+.reviews{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.review-box{
+background:blue;
+padding:25px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* SOCIAL */
+
+.social{
+text-align:center;
+}
+
+.social a{
+margin:10px;
+font-size:20px;
+text-decoration:none;
+color:#0a2540;
+}
+
+/* CONTACT */
+
+form{
+max-width:500px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+input,textarea{
+padding:10px;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
+/* FOOTER */
+
+footer{
+background:#0a2540;
+color:sky blue;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<h2>Vinod</h2>
+
+<div>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#services">Services</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact">Contact</a>
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div>
+
+<h1>Hi, I'm Vinod</h1>
+
+<p>Freelance Web Developer</p>
+
+<button class="btn">Hire Me</button>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="about">
+
+<img src="https://randomuser.me/api/portraits/men/32.jpg">
+
+<p style="max-width:500px;">
+I am an Information Technology student and freelance web developer.
+I create responsive modern websites using HTML, CSS and JavaScript.
+</p>
+
+</div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+<h2 class="section-title">Skills</h2>
+
+<div class="skill">
+HTML
+<div class="bar"><span style="width:90%"></span></div>
+</div>
+
+<div class="skill">
+CSS
+<div class="bar"><span style="width:85%"></span></div>
+</div>
+
+<div class="skill">
+JavaScript
+<div class="bar"><span style="width:70%"></span></div>
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<h2 class="section-title">Projects</h2>
+
+<div class="projects">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1497366216548-37526070297c">
+<div class="card-content">
+<h3>College Website</h3>
+<p>Responsive college website design.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f">
+<div class="card-content">
+<h3>Business Website</h3>
+<p>Website for local businesses.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
+<div class="card-content">
+<h3>Portfolio Website</h3>
+<p>Developer portfolio website.</p>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section id="services">
+
+<h2 class="section-title">Services</h2>
+
+<div class="services">
+
+<div class="service-box">
+<h3>Website Development</h3>
+<p>Responsive business websites.</p>
+</div>
+
+<div class="service-box">
+<h3>Landing Pages</h3>
+<p>High converting marketing pages.</p>
+</div>
+
+<div class="service-box">
+<h3>UI Design</h3>
+<p>Modern website UI design.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- REVIEWS -->
+
+<section id="reviews">
+
+<h2 class="section-title">Client Reviews</h2>
+
+<div class="reviews">
+
+<div class="review-box">
+⭐️⭐️⭐️⭐️⭐️  
+<p>Great website developer. Highly recommended.</p>
+</div>
+
+<div class="review-box">
+⭐️⭐️⭐️⭐️⭐️  
+<p>Very professional and fast delivery.</p>
+</div>
+
+<div class="review-box">
+⭐️⭐️⭐️⭐️⭐️  
+<p>My business website looks amazing!</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2 class="section-title">Contact Me</h2>
+
+<form>
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Your Email">
+
+<textarea rows="5" placeholder="Your Message"></textarea>
+
+<button class="btn">Send Message</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<p>© 2026 Vinod | Freelance Web Developer</p>
+
+</footer>
+
+</body>
+</html>
